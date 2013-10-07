@@ -1,0 +1,502 @@
+-------------------------------------------------------------------------------
+Test set: com.accuweaver.unfuddletojira.UnfuddleParserTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 5, Errors: 5, Skipped: 0, Time elapsed: 3.772 sec <<< FAILURE!
+testMain(com.accuweaver.unfuddletojira.UnfuddleParserTest)  Time elapsed: 2.051 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: The test case is a prototype.
+	at junit.framework.Assert.fail(Assert.java:47)
+	at com.accuweaver.unfuddletojira.UnfuddleParserTest.testMain(UnfuddleParserTest.java:41)
+testReadUrl(com.accuweaver.unfuddletojira.UnfuddleParserTest)  Time elapsed: 0.042 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.accuweaver.unfuddletojira.UnfuddleParser.getUrlStream(UnfuddleParser.java:167)
+	at com.accuweaver.unfuddletojira.UnfuddleParser.readUrl(UnfuddleParser.java:117)
+	at com.accuweaver.unfuddletojira.UnfuddleParserTest.testReadUrl(UnfuddleParserTest.java:147)
+testDumpProject(com.accuweaver.unfuddletojira.UnfuddleParserTest)  Time elapsed: 1.433 sec  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<> but was:<<!DOCTYPE html>
+<html  id="ng-app" ng-app="unf" xmlns:ng="http://angularjs.org">
+<head>
+  <title>Omnis Tools Issue Tracking - Unfuddle</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- stylesheets for third party libraries -->
+  <link href="https://d3idzv2a4g528y.cloudfront.net/stylesheets/3rdParty.css?1380910818" media="all" rel="stylesheet" type="text/css" />
+  
+  <link href="https://d3idzv2a4g528y.cloudfront.net/stylesheets/ajaxUI.css?1380910818" media="all" rel="stylesheet" type="text/css" />
+  
+  <link href="https://d3idzv2a4g528y.cloudfront.net/stylesheets/print.css?1380910818" media="print" rel="stylesheet" type="text/css" />
+  
+  <!-- stylesheets for the sign in page  -->
+  <link disabled="disabled" href="https://d3idzv2a4g528y.cloudfront.net/stylesheets/page.css?1380910818" media="all" rel="stylesheet" type="text/css" />
+  
+  <!--[if IE 7]>
+    <link href="https://d3idzv2a4g528y.cloudfront.net/stylesheets/ie7-fixes.css?1380910818" media="all" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  
+  <!--[if lt IE 7]>
+    <style type="text/css">
+      * html body{ width: expression( document.documentElement.clientWidth < 900 ? '900px' : '100%' ); }
+      * html .ticket .attachment_image{ width: expression( this.width < 500 ? 'auto' : '100%' ); }
+      * html .message .attachment_image{ width: expression( this.width < 500 ? 'auto' : '100%' ); }
+    </style>
+  <![endif]-->
+  
+  <!-- 3rd party libraries scripts -->
+  <script src="https://d3idzv2a4g528y.cloudfront.net/javascripts/3rdParty.js?1380910818" type="text/javascript"></script>
+  
+  <script>
+    if (typeof Unfuddle == 'undefined') { Unfuddle = {} }
+    
+    Unfuddle.Config = {
+      // "/sub/subdomain" in development or "" in production
+      baseUrl :                   "",
+      baseApiUrl :                "/api/v1",
+      subdomain:                  "omnistools",
+      accountTitle:               "Omnis Tools Issue Tracking",
+      refreshTimeout:             600000, // 10 min
+      currentProjectID:           0,
+      development:                false,
+      ssl:                        true,
+      httpSchema:                 window.location.protocol,
+      
+      assetTimestamp:             "1380910818",
+      assetHost:                  'https://d3idzv2a4g528y.cloudfront.net',
+      
+      quickAddTip: false,
+      billingCycleDay:             16
+    }
+    Config = Unfuddle.Config
+    
+    // preload some data
+    currentAccountData = null
+    currentPersonData  = null
+    
+      currentAccountData  = {"default_ticket_report_id":1,"billing_error_reminded_at":"2013-04-14T01:37:59Z","billing_postal_code":"94086","features":{"time_tracking":true,"custom_statuses":true,"max_projects":20,"max_archived_projects":99999,"attachments":true,"sort_order":5,"max_people":1000,"price_per_month":49.0,"max_pages":99999,"ssl":true,"storage":6144,"promotional":false,"beta":false},"force_ssl":false,"subdomain":"omnistools","plan":"corporate","billing_state":"CA","default_time_zone":null,"tags":{"future_plan":"none"},"suitable_plan":null,"email_invoice":false,"billing_street1":"260 S. Sunnyvale Ave., Ste 4","access_key":"e4cd7c78fb05baf2208e21e87260836a","billing_city":"Sunnyvale","updated_at":"2013-09-28T15:02:48Z","title":"Omnis Tools Issue Tracking","created_at":"2009-09-17T18:38:14Z","billing_street2":null,"billing_first_name":"Tammy","notebook_pages":10,"billing_country":"United States of America","text_markup":"markdown,textile,plain","billing_cc_number_short":"7508","billing_frequency":"monthly","billing_last_name":"Gaw","actual_default_ticket_report_id_initial":1,"flagged_for_billing_error":false,"billing_cycle_day":16,"id":1,"disk_usage":872272,"billing_type":"visa","trial_enabled_on":null,"billing_error_date":"2013-04-16","description":"","billing_company":null,"billing_email":"tgaw@omnisrisk.com"}
+      currentPersonData   = {"notification_scope_source":"all","identity_url":"","time_zone":"Pacific Time (US & Canada)","last_name":"Weaver","account_id":1,"notification_scope_tickets":"all","notification_frequency":"immediate","tags":{"show_starter_tour":false,"hide_trial_expires_soon_notification":false,"activity_page_predefined_range":"today","display_help_tips":false,"show_preview":true,"ticket_show_collapsed_sections":null,"account_first_signin":false,"activity_page_events_collapsed":false},"notification_ignore_self":false,"username":"rweaver","notification_scope_notebooks":"all","last_signed_in":"2013-10-06T15:40:40Z","access_key":"3abb8dadbaaa6ee202bee76513cd1f6c","updated_at":"2013-10-06T15:40:40Z","notification_last_sent":"2013-09-28T14:44:55Z","created_at":"2010-03-16T21:34:07Z","text_markup":"markdown","notification_scope_messages":"all","is_removed":false,"email":"webweave@gmail.com","notification_scope_milestones":"all","is_administrator":true,"id":3,"first_name":"Rob"}
+    
+  </script>
+  
+  
+  <script src="https://d3idzv2a4g528y.cloudfront.net/javascripts/ajaxUI.js?1380910818" type="text/javascript"></script>
+  
+    
+</head>
+  
+<body class='theme-classic' >
+  <a name="top"></a>
+  
+  
+    <div id="loading" style="margin:0 10px;padding:0 10px;font-size:22px;">
+      <div>Omnis Tools Issue Tracking  <span style="color:#880000; letter-spacing:-1px; font-size:23px"> - Unfuddle</span></div>
+      <div style="border-bottom: 1px solid #ccc;border-top: 1px solid #eee;height:0; margin:5px auto 0"></div>
+      <p style="line-height:20px; font-size:14px; color:#656565"><img alt="Ajax" src="https://d3idzv2a4g528y.cloudfront.net/images/ajax.24.light.gif?1380910818" style="vertical-align:middle; height:20px" /> Loading...</p>
+    </div>
+  
+  
+  <div id="account_header" class="navbar navbar-fixed-top navbar-inverse" style="display:none">
+    <div class="navbar-inner">
+      <div class='container-fluid'>
+        <ul class='nav pull-right right-actions-top'>
+          <li class="dropdown looged-user-li">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <span id='logged_user'>Rob W.</span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#/people/settings" rel="ajax_link">Personal Settings</a></li>
+              <li id="sign_out_link"><a href="#" onclick='return false;'>Sign Out</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;">
+              Support
+            </a>
+            <ul class="dropdown-menu" style='width:300px'>
+              <li><a target="_blank" href="http://unfuddle.com/support">Help</a></li>
+              <li><a href="#shortcutsModal" role="button" data-toggle="modal">Keyboard shortcuts</a></li>
+              <li class='divider'></li>
+              <li style="color:#777">
+                <div id="send_feedback">
+                  <h3>We want to hear from you!</h3>
+                  
+                  <form id="send_feedback_form" data-validate="parsley" onsubmit="return false;">
+                    <div class="relative">
+                      <textarea name="feedback" id="feedback" placeholder="Is there something you feel Unfuddle could do better for you? We want to know!" rows="6"
+                        data-required="true"
+                        data-required-message="Please enter<br />a message."
+                        data-notblank="true"
+                        data-notblank-message="Please enter<br />a message."
+                      ></textarea>
+                    </div>
+                    
+                    <div class="actions">
+                      <input type="submit" id="send_feedback_submit" value="Send" data-error-message="" class="validated_form_submit btn" />
+                    </div>
+                  </form>
+                </div>
+                <div style='display: none' id="send_feedback_thanks">
+                  <h3>Thanks for your feedback!</h3>
+                  <p>We are constantly trying to make Unfuddle better and your feedback directly influences the changes we make.</p>
+                  <p><a onclick="return false;" href="#">Show Feedback Form</a></p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li style="width: 30px">
+            <div id="ajax_static"><div id="ajax_working" style="display: none;"></div><div id="ajax_post_ok" title='All changes are saved.'><i class='icon-ok-circle'></i></div></div>
+          </li>
+        </ul>
+      
+        <form id="search_form" class="navbar-search pull-right" onsubmit="return false;">
+          <input type="text" class='search-query' name="search_query" id="search_query" placeholder="Search" />
+        </form>
+        
+        <ul class='nav pull-right messages'>
+          
+          <li class="new_features"><a href='http://unfuddle.com/blog/2013/09/130930-introducing-task-boards-schedules' target='_blank'>Introducing: Task Boards (Schedules)</a></li>
+          
+          
+        </ul>
+        
+        <ul class='nav'>
+          <li class="dropdown active" id="project_jump">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <span>All Projects</span><span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li style='padding: 5px 10px'>Loading Projects...</li>
+            </ul>
+          </li>
+          <li class='account_name'>
+            <a href="#/account" rel="ajax_link">Omnis Tools Issue Tracking</a>
+          </li>
+          <li class='account_settings'></li>
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+  <div id="wrapper" style="display:none" class="account_wrapper hide_sidebar">
+    
+    
+    <div id="header" class='header-fixed-top navbar'>
+      <div class='navbar-inner'>
+        <div id='header_content'>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="archive_notice"></div>
+    
+    <div class='row-fluid'>
+      <div id="add_form_container" class="hide span10 offset1"></div>
+    </div>
+    
+    <div id="main">
+      <div class="error_explanation" id="billing_error_alert" style="display:none;"></div>
+      
+      
+      <div id="notice_container"></div>
+      
+      
+      <div id="content">
+        
+      </div>
+    </div>
+    
+    <div id="sidebar">
+      
+    </div>
+  </div>
+  <div id="footer" style="display:none">
+    
+        <span id="copyright">This account has been <a href="http://unfuddle.com">Unfuddled</a>. &copy;2006-2013 Unfuddle LLC.  All rights reserved.</span> <span id="legal">
+      <a href='https://unfuddle.com/support/terms_of_service' target="_blank">Terms of Service</a>.  
+      <a href='https://unfuddle.com/support/privacy_policy' target="_blank">Privacy Policy</a>.
+    </span>
+  </div>
+  
+  
+          <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-509811-1']);
+      
+      // submit pageview and information
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+        
+  <iframe id="remoting_iframe" name="remoting_iframe" style="width:1px;height:1px;border:0px" src="javascript:false;"></iframe>
+  </body>
+</html>
+>
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at com.accuweaver.unfuddletojira.UnfuddleParserTest.testDumpProject(UnfuddleParserTest.java:162)
+testGetUrlStream(com.accuweaver.unfuddletojira.UnfuddleParserTest)  Time elapsed: 0.006 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.accuweaver.unfuddletojira.UnfuddleParser.getUrlStream(UnfuddleParser.java:167)
+	at com.accuweaver.unfuddletojira.UnfuddleParserTest.testGetUrlStream(UnfuddleParserTest.java:175)
+testReadSmallTextFile(com.accuweaver.unfuddletojira.UnfuddleParserTest)  Time elapsed: 0 sec  <<< ERROR!
+java.io.IOException: Is a directory
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.FileDispatcherImpl.read(FileDispatcherImpl.java:46)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:225)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:198)
+	at sun.nio.ch.FileChannelImpl.read(FileChannelImpl.java:143)
+	at sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:65)
+	at sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:109)
+	at sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:103)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:283)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:325)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:177)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:154)
+	at java.io.BufferedReader.readLine(BufferedReader.java:317)
+	at java.io.BufferedReader.readLine(BufferedReader.java:382)
+	at java.nio.file.Files.readAllLines(Files.java:3002)
+	at com.accuweaver.unfuddletojira.UnfuddleParser.readSmallTextFile(UnfuddleParser.java:192)
+	at com.accuweaver.unfuddletojira.UnfuddleParserTest.testReadSmallTextFile(UnfuddleParserTest.java:189)
+testWriteSmallTextFile_List_String(com.accuweaver.unfuddletojira.UnfuddleParserTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Objects.java:201)
+	at java.nio.file.Files.write(Files.java:3115)
+	at com.accuweaver.unfuddletojira.UnfuddleParser.writeSmallTextFile(UnfuddleParser.java:207)
+	at com.accuweaver.unfuddletojira.UnfuddleParserTest.testWriteSmallTextFile_List_String(UnfuddleParserTest.java:203)
+testWriteSmallTextFile_String_String(com.accuweaver.unfuddletojira.UnfuddleParserTest)  Time elapsed: 0 sec  <<< ERROR!
+java.nio.file.FileSystemException: : Is a directory
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:91)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:213)
+	at java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:430)
+	at java.nio.file.Files.newOutputStream(Files.java:170)
+	at java.nio.file.Files.write(Files.java:3117)
+	at com.accuweaver.unfuddletojira.UnfuddleParser.writeSmallTextFile(UnfuddleParser.java:207)
+	at com.accuweaver.unfuddletojira.UnfuddleParser.writeSmallTextFile(UnfuddleParser.java:219)
+	at com.accuweaver.unfuddletojira.UnfuddleParserTest.testWriteSmallTextFile_String_String(UnfuddleParserTest.java:216)
+testGetProjects(com.accuweaver.unfuddletojira.UnfuddleParserTest)  Time elapsed: 0.103 sec  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<> but was:<<?xml version="1.0" encoding="UTF-8"?>
+<projects type="array">
+  <project>
+    <account-id type="integer">1</account-id>
+    <archived type="boolean">false</archived>
+    <assignee-on-resolve>reporter</assignee-on-resolve>
+    <backup-frequency type="integer">0</backup-frequency>
+    <close-ticket-simultaneously-default type="boolean">false</close-ticket-simultaneously-default>
+    <default-ticket-report-id type="integer">13</default-ticket-report-id>
+    <description nil="true"></description>
+    <disk-usage type="integer">99376</disk-usage>
+    <enable-time-tracking type="boolean">true</enable-time-tracking>
+    <id type="integer">2</id>
+    <s3-access-key-id></s3-access-key-id>
+    <s3-backup-enabled type="boolean">false</s3-backup-enabled>
+    <s3-bucket-name></s3-bucket-name>
+    <short-name>omnis</short-name>
+    <theme>purple</theme>
+    <ticket-field1-active type="boolean">false</ticket-field1-active>
+    <ticket-field1-disposition>text</ticket-field1-disposition>
+    <ticket-field1-title>Field 1</ticket-field1-title>
+    <ticket-field2-active type="boolean">false</ticket-field2-active>
+    <ticket-field2-disposition>text</ticket-field2-disposition>
+    <ticket-field2-title>Field 2</ticket-field2-title>
+    <ticket-field3-active type="boolean">false</ticket-field3-active>
+    <ticket-field3-disposition>text</ticket-field3-disposition>
+    <ticket-field3-title>Field 3</ticket-field3-title>
+    <title>Omnis Tools Mobile</title>
+    <statuses type="array">
+      <status>
+        <name>new</name>
+        <id>new</id>
+        <color>gray</color>
+      </status>
+      <status>
+        <name>Unaccepted</name>
+        <id>252d92e4-6065-4643-afcd-3ab4af36fff8</id>
+        <color>red</color>
+      </status>
+      <status>
+        <name>Reassigned</name>
+        <id>028317e0-7a28-43bf-97fa-32a5566b1b33</id>
+        <color>green</color>
+      </status>
+      <status>
+        <name>Reopened</name>
+        <id>f2183b48-227e-4133-ac2d-48278e23535f</id>
+        <color>blue</color>
+      </status>
+      <status>
+        <name>Accepted</name>
+        <id>812b1627-56a9-4c29-9160-c1f0dfe5b794</id>
+        <color>yellow</color>
+      </status>
+      <status>
+        <name>Resolved</name>
+        <id>d7ffac65-2dd1-49a6-9799-375307ead35e</id>
+        <color>orange</color>
+      </status>
+      <status>
+        <name>closed</name>
+        <id>closed</id>
+        <color>black</color>
+      </status>
+    </statuses>
+    <created-at>2011-04-22T00:45:58Z</created-at>
+    <updated-at>2013-09-22T15:09:58Z</updated-at>
+  </project>
+  <project>
+    <account-id type="integer">1</account-id>
+    <archived type="boolean">false</archived>
+    <assignee-on-resolve>reporter</assignee-on-resolve>
+    <backup-frequency type="integer">0</backup-frequency>
+    <close-ticket-simultaneously-default type="boolean">false</close-ticket-simultaneously-default>
+    <default-ticket-report-id type="integer" nil="true"></default-ticket-report-id>
+    <description nil="true"></description>
+    <disk-usage type="integer">1100</disk-usage>
+    <enable-time-tracking type="boolean">true</enable-time-tracking>
+    <id type="integer">3</id>
+    <s3-access-key-id></s3-access-key-id>
+    <s3-backup-enabled type="boolean">false</s3-backup-enabled>
+    <s3-bucket-name></s3-bucket-name>
+    <short-name>omnistoolswp</short-name>
+    <theme>blue</theme>
+    <ticket-field1-active type="boolean">false</ticket-field1-active>
+    <ticket-field1-disposition>text</ticket-field1-disposition>
+    <ticket-field1-title>Field 1</ticket-field1-title>
+    <ticket-field2-active type="boolean">false</ticket-field2-active>
+    <ticket-field2-disposition>text</ticket-field2-disposition>
+    <ticket-field2-title>Field 2</ticket-field2-title>
+    <ticket-field3-active type="boolean">false</ticket-field3-active>
+    <ticket-field3-disposition>text</ticket-field3-disposition>
+    <ticket-field3-title>Field 3</ticket-field3-title>
+    <title>Omnis Tools Public Web Site (WordPress)</title>
+    <statuses type="array">
+      <status>
+        <name>new</name>
+        <id>new</id>
+        <color>gray</color>
+      </status>
+      <status>
+        <name>Unaccepted</name>
+        <id>b5ee4b3c-e0fc-4ab0-8961-1427d8ca8dd7</id>
+        <color>red</color>
+      </status>
+      <status>
+        <name>Reassigned</name>
+        <id>31734116-8326-455c-941a-a0b00feef57f</id>
+        <color>green</color>
+      </status>
+      <status>
+        <name>Reopened</name>
+        <id>03ca3641-620f-439e-bead-3290fbe13173</id>
+        <color>blue</color>
+      </status>
+      <status>
+        <name>Accepted</name>
+        <id>618f4991-1126-40d5-aece-031bf74aa4d3</id>
+        <color>yellow</color>
+      </status>
+      <status>
+        <name>Resolved</name>
+        <id>77075076-1f14-4b44-a2a2-b041bbd000e0</id>
+        <color>orange</color>
+      </status>
+      <status>
+        <name>closed</name>
+        <id>closed</id>
+        <color>black</color>
+      </status>
+    </statuses>
+    <created-at>2012-02-22T14:10:09Z</created-at>
+    <updated-at>2013-09-19T10:38:56Z</updated-at>
+  </project>
+  <project>
+    <account-id type="integer">1</account-id>
+    <archived type="boolean">false</archived>
+    <assignee-on-resolve>reporter</assignee-on-resolve>
+    <backup-frequency type="integer">7</backup-frequency>
+    <close-ticket-simultaneously-default type="boolean">false</close-ticket-simultaneously-default>
+    <default-ticket-report-id type="integer">7</default-ticket-report-id>
+    <description>Omnis Tools Web site project</description>
+    <disk-usage type="integer">772100</disk-usage>
+    <enable-time-tracking type="boolean">true</enable-time-tracking>
+    <id type="integer">1</id>
+    <s3-access-key-id></s3-access-key-id>
+    <s3-backup-enabled type="boolean">false</s3-backup-enabled>
+    <s3-bucket-name></s3-bucket-name>
+    <short-name>project</short-name>
+    <theme>orange</theme>
+    <ticket-field1-active type="boolean">false</ticket-field1-active>
+    <ticket-field1-disposition>text</ticket-field1-disposition>
+    <ticket-field1-title>Estimated hours</ticket-field1-title>
+    <ticket-field2-active type="boolean">false</ticket-field2-active>
+    <ticket-field2-disposition>text</ticket-field2-disposition>
+    <ticket-field2-title>Hours worked</ticket-field2-title>
+    <ticket-field3-active type="boolean">true</ticket-field3-active>
+    <ticket-field3-disposition>list</ticket-field3-disposition>
+    <ticket-field3-title>Completion</ticket-field3-title>
+    <title>Omnis Tools Web Site</title>
+    <statuses type="array">
+      <status>
+        <name>new</name>
+        <id>new</id>
+        <color>gray</color>
+      </status>
+      <status>
+        <name>Unaccepted</name>
+        <id>0881f7b5-177d-4a26-a453-221759741705</id>
+        <color>red</color>
+      </status>
+      <status>
+        <name>Reassigned</name>
+        <id>c61c9c58-732b-40a8-9c05-6b2ab6e45e37</id>
+        <color>green</color>
+      </status>
+      <status>
+        <name>Reopened</name>
+        <id>85bd6466-c65b-476a-9793-2e5bf7acd09d</id>
+        <color>blue</color>
+      </status>
+      <status>
+        <name>Accepted</name>
+        <id>e7a9b8ce-f84f-4708-9db1-75609d94f9d8</id>
+        <color>yellow</color>
+      </status>
+      <status>
+        <name>Resolved</name>
+        <id>2258f2a3-1bfa-4a6d-91fd-587af9b41714</id>
+        <color>orange</color>
+      </status>
+      <status>
+        <name>closed</name>
+        <id>closed</id>
+        <color>black</color>
+      </status>
+    </statuses>
+    <created-at>2009-09-17T18:38:15Z</created-at>
+    <updated-at>2013-09-19T10:38:57Z</updated-at>
+  </project>
+</projects>
+>
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at com.accuweaver.unfuddletojira.UnfuddleParserTest.testGetProjects(UnfuddleParserTest.java:52)
+testParseDescriptions(com.accuweaver.unfuddletojira.UnfuddleParserTest)  Time elapsed: 0 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<[Test 
+this, second]> but was:<[Test 
+this]>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at com.accuweaver.unfuddletojira.UnfuddleParserTest.testParseDescriptions(UnfuddleParserTest.java:120)
+testGetProjectIds(com.accuweaver.unfuddletojira.UnfuddleParserTest)  Time elapsed: 0.117 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<[2, 3, 1]> but was:<[2, new, 252d92e4-6065-4643-afcd-3ab4af36fff8, 028317e0-7a28-43bf-97fa-32a5566b1b33, f2183b48-227e-4133-ac2d-48278e23535f, 812b1627-56a9-4c29-9160-c1f0dfe5b794, d7ffac65-2dd1-49a6-9799-375307ead35e, closed, 3, new, b5ee4b3c-e0fc-4ab0-8961-1427d8ca8dd7, 31734116-8326-455c-941a-a0b00feef57f, 03ca3641-620f-439e-bead-3290fbe13173, 618f4991-1126-40d5-aece-031bf74aa4d3, 77075076-1f14-4b44-a2a2-b041bbd000e0, closed, 1, new, 0881f7b5-177d-4a26-a453-221759741705, c61c9c58-732b-40a8-9c05-6b2ab6e45e37, 85bd6466-c65b-476a-9793-2e5bf7acd09d, e7a9b8ce-f84f-4708-9db1-75609d94f9d8, 2258f2a3-1bfa-4a6d-91fd-587af9b41714, closed]>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at com.accuweaver.unfuddletojira.UnfuddleParserTest.testGetProjectIds(UnfuddleParserTest.java:66)
